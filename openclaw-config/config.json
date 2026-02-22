@@ -1,0 +1,31 @@
+{
+  "version": "2026.1.30",
+  "gateway": {
+    "port": 18789,
+    "host": "0.0.0.0",
+    "auth": {
+      "token": "b07c5da40f240ec91167cce8bf5c7e87529766df5843d786"
+    }
+  },
+  "agents": {
+    "main": {
+      "model": "zai/glm-4.5",
+      "workspace": "~/.openclaw/workspace",
+      "sandbox": {
+        "mode": "non-main"
+      }
+    },
+    "defaults": {
+      "model": {
+        "primary": "zai/glm-4.5"
+      },
+      "models": {
+        "zai/glm-4.5": {}
+      }
+    }
+  },
+  "routing": {
+    "defaultAgent": "main"
+  },
+  "channels": {}
+}

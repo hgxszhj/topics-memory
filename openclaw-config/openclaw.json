@@ -1,0 +1,235 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.1.30",
+    "lastTouchedAt": "2026-02-21T13:21:49.939Z"
+  },
+  "env": {
+    "TAVILY_API_KEY": "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",
+    "ZHIPU_API_KEY": "d232922a3b4546ccbe46aedd7cf61a92.g0Nk4z9FAmSE091O"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-13T09:54:23.479Z",
+    "lastRunVersion": "2026.2.3",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "update": {
+    "channel": "stable"
+  },
+  "auth": {
+    "profiles": {
+      "zai:default": {
+        "provider": "zai",
+        "mode": "api_key"
+      },
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "zai/glm-4.7-flash",
+        "fallbacks": [
+          "google/gemini-3-flash-preview"
+        ]
+      },
+      "models": {
+        "openrouter/google/gemini-2.5-flash": {
+          "params": {
+            "temperature": 0.7,
+            "maxTokens": 65536
+          }
+        },
+        "openrouter/qwen/qwen3-coder": {
+          "alias": "Qwen Coder Free",
+          "params": {
+            "temperature": 0.6,
+            "maxTokens": 32768
+          }
+        },
+        "openrouter/deepseek/deepseek-r1-0528": {
+          "alias": "DeepSeek R1 Free",
+          "params": {
+            "temperature": 0.6,
+            "maxTokens": 32768
+          }
+        },
+        "openrouter/stepfun/step-3.5-flash": {
+          "alias": "StepFun Flash Free",
+          "params": {
+            "temperature": 0.7,
+            "maxTokens": 32768
+          }
+        },
+        "openrouter/z-ai/glm-4.5-air": {
+          "alias": "GLM 4.5 Air Free",
+          "params": {
+            "temperature": 0.7,
+            "maxTokens": 32768
+          }
+        },
+        "openrouter/z-ai/glm-4.6": {
+          "alias": "GLM 4.6 (智谱AI)",
+          "params": {
+            "temperature": 0.7,
+            "maxTokens": 32768
+          }
+        },
+        "openrouter/z-ai/glm-4.5": {
+          "alias": "GLM 4.5 (OpenRouter)",
+          "params": {
+            "temperature": 0.7,
+            "maxTokens": 32768
+          }
+        },
+        "zai/glm-4.5": {
+          "alias": "GLM 4.5 (智谱AI官方)",
+          "params": {
+            "temperature": 0.7,
+            "maxTokens": 32768
+          }
+        },
+        "zai/glm-4-flash": {
+          "alias": "GLM-4-Flash (智谱AI)",
+          "params": {
+            "temperature": 0.7,
+            "maxTokens": 8192
+          }
+        }
+      },
+      "workspace": "/root/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "lan",
+    "controlUi": {
+      "enabled": true,
+      "allowInsecureAuth": true,
+      "dangerouslyDisableDeviceAuth": true
+    },
+    "auth": {
+      "mode": "token",
+      "token": "b07c5da40f240ec91167cce8bf5c7e87529766df5843d786"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "tls": {
+      "enabled": true,
+      "certPath": "/root/.openclaw/certs/cert.pem",
+      "keyPath": "/root/.openclaw/certs/key.pem"
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    },
+    "entries": {
+      "1password": {
+        "enabled": false
+      },
+      "search": {
+        "enabled": true
+      },
+      "find-skills": {
+        "enabled": true
+      },
+      "ralph-tui-prd": {
+        "enabled": true
+      },
+      "using-superpowers": {
+        "enabled": true
+      },
+      "writing-plans": {
+        "enabled": true
+      },
+      "brainstorming": {
+        "enabled": true
+      },
+      "subagent-driven-development": {
+        "enabled": true
+      },
+      "systematic-debugging": {
+        "enabled": true
+      },
+      "verification-before-completion": {
+        "enabled": true
+      },
+      "slack-proactive-intervention-patterns": {
+        "enabled": true
+      },
+      "iterative-development": {
+        "enabled": true
+      },
+      "autonomous-agents": {
+        "enabled": true
+      },
+      "autonomous-agent-patterns": {
+        "enabled": true
+      },
+      "dependency-upgrade": {
+        "enabled": true
+      },
+      "changelog-automation": {
+        "enabled": true
+      },
+      "agent-loops": {
+        "enabled": true
+      },
+      "context-compression": {
+        "enabled": true
+      },
+      "self-improvement": {
+        "enabled": true
+      },
+      "advanced-guardrails": {
+        "enabled": true
+      },
+      "security-scanning": {
+        "enabled": true
+      },
+      "mcp-security-hardening": {
+        "enabled": true
+      },
+      "resilience-patterns": {
+        "enabled": true
+      }
+    }
+  }
+}

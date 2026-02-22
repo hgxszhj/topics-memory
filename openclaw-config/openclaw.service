@@ -1,0 +1,17 @@
+[Unit]
+Description=OpenClaw Gateway
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/openclaw
+ExecStart=/usr/bin/node /root/openclaw/openclaw.mjs gateway
+ExecStopPost=/bin/sh -c 'pkill -9 -f "openclaw.mjs gateway" || true'
+Restart=always
+RestartSec=10
+Environment=NODE_ENV=production
+Environment=ZHIPU_API_KEY=d232922a3b4546ccbe46aedd7cf61a92.g0Nk4z9FAmSE091O
+
+[Install]
+WantedBy=multi-user.target

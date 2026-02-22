@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "profiles": {
+    "openrouter:default": {
+      "type": "api_key",
+      "provider": "openrouter",
+      "key": "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"
+    },
+    "zai:default": {
+      "type": "api_key",
+      "provider": "zai",
+      "key": "d232922a3b4546ccbe46aedd7cf61a92.g0Nk4z9FAmSE091O"
+    }
+  },
+  "lastGood": {
+    "openrouter": "openrouter:default",
+    "zai": "zai:default"
+  },
+  "usageStats": {
+    "openrouter:default": {
+      "errorCount": 6,
+      "lastFailureAt": 1771715522093,
+      "lastUsed": 1770699584027,
+      "failureCounts": {
+        "auth": 6
+      },
+      "cooldownUntil": 1771719122093
+    },
+    "zai:default": {
+      "lastUsed": 1771722658380,
+      "errorCount": 0,
+      "lastFailureAt": 1771722052513
+    }
+  }
+}
