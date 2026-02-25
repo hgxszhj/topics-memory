@@ -1,0 +1,4 @@
+Backup Date: 2026年 02月 22日 星期日 08:51:13 CST
+Backup Path: /root/.openclaw/workspace/backups/memory/memory_backup_20260222_085113
+Backup Size: 28K
+Source: /root/.openclaw/workspace
