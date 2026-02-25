@@ -1,0 +1,339 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.21",
+    "lastTouchedAt": "2026-02-25T14:04:19.165Z"
+  },
+  "env": {
+    "TAVILY_API_KEY": "tvly-***",
+    "ZHIPU_API_KEY": "***",
+    "JINA_API_KEY": "jina_***",
+    "DISCORD_BOT_TOKEN": "MTQ3***"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-25T11:05:02.774Z",
+    "lastRunVersion": "2026.2.13",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "update": {
+    "channel": "stable"
+  },
+  "auth": {
+    "profiles": {
+      "zai:default": {
+        "provider": "zai",
+        "mode": "api_key"
+      },
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "zai/glm-4.7-flash",
+        "fallbacks": [
+          "google/gemini-3-flash-preview"
+        ]
+      },
+      "models": {
+        "openrouter/google/gemini-2.5-flash": {
+          "params": {
+            "temperature": 0.7,
+            "maxTokens": 65536
+          }
+        },
+        "openrouter/qwen/qwen3-coder": {
+          "alias": "Qwen Coder Free",
+          "params": {
+            "temperature": 0.6,
+            "maxTokens": 32768
+          }
+        },
+        "openrouter/deepseek/deepseek-r1-0528": {
+          "alias": "DeepSeek R1 Free",
+          "params": {
+            "temperature": 0.6,
+            "maxTokens": 32768
+          }
+        },
+        "openrouter/stepfun/step-3.5-flash": {
+          "alias": "StepFun Flash Free",
+          "params": {
+            "temperature": 0.7,
+            "maxTokens": 32768
+          }
+        },
+        "openrouter/z-ai/glm-4.5-air": {
+          "alias": "GLM 4.5 Air Free",
+          "params": {
+            "temperature": 0.7,
+            "maxTokens": 32768
+          }
+        },
+        "openrouter/z-ai/glm-4.6": {
+          "alias": "GLM 4.6 (智谱AI)",
+          "params": {
+            "temperature": 0.7,
+            "maxTokens": 32768
+          }
+        },
+        "openrouter/z-ai/glm-4.5": {
+          "alias": "GLM 4.5 (OpenRouter)",
+          "params": {
+            "temperature": 0.7,
+            "maxTokens": 32768
+          }
+        },
+        "zai/glm-4.5": {
+          "alias": "GLM 4.5 (智谱AI官方)",
+          "params": {
+            "temperature": 0.7,
+            "maxTokens": 32768
+          }
+        },
+        "zai/glm-4-flash": {
+          "alias": "GLM-4-Flash (智谱AI)",
+          "params": {
+            "temperature": 0.7,
+            "maxTokens": 8192
+          }
+        }
+      },
+      "workspace": "/root/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "groupPolicy": "allowlist",
+      "allowFrom": ["*"],
+      "dm": {
+        "enabled": true,
+        "policy": "open"
+      },
+      "guilds": {
+        "1476210396929986662": {
+          "requireMention": false,
+          "users": ["*"],
+          "channels": {
+            "*": {
+              "allow": true,
+              "requireMention": false
+            }
+          }
+        },
+        "1476209607205453967": {
+          "requireMention": false,
+          "users": ["*"],
+          "channels": {
+            "*": {
+              "allow": true,
+              "requireMention": false
+            }
+          }
+        },
+        "1476206522286604460": {
+          "requireMention": false,
+          "users": ["*"],
+          "channels": {
+            "*": {
+              "allow": true,
+              "requireMention": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "lan",
+    "controlUi": {
+      "enabled": true,
+      "allowInsecureAuth": true,
+      "dangerouslyDisableDeviceAuth": true
+    },
+    "auth": {
+      "mode": "token",
+      "token": "b07c5da40f240ec91167cce8bf5c7e87529766df5843d786"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "tls": {
+      "enabled": true,
+      "certPath": "/root/.openclaw/certs/cert.pem",
+      "keyPath": "/root/.openclaw/certs/key.pem"
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    },
+    "entries": {
+      "1password": {
+        "enabled": false
+      },
+      "search": {
+        "enabled": true
+      },
+      "find-skills": {
+        "enabled": true
+      },
+      "ralph-tui-prd": {
+        "enabled": true
+      },
+      "using-superpowers": {
+        "enabled": true
+      },
+      "writing-plans": {
+        "enabled": true
+      },
+      "brainstorming": {
+        "enabled": true
+      },
+      "subagent-driven-development": {
+        "enabled": true
+      },
+      "systematic-debugging": {
+        "enabled": true
+      },
+      "verification-before-completion": {
+        "enabled": true
+      },
+      "slack-proactive-intervention-patterns": {
+        "enabled": true
+      },
+      "iterative-development": {
+        "enabled": true
+      },
+      "autonomous-agents": {
+        "enabled": true
+      },
+      "autonomous-agent-patterns": {
+        "enabled": true
+      },
+      "dependency-upgrade": {
+        "enabled": true
+      },
+      "changelog-automation": {
+        "enabled": true
+      },
+      "agent-loops": {
+        "enabled": true
+      },
+      "context-compression": {
+        "enabled": true
+      },
+      "self-improvement": {
+        "enabled": true
+      },
+      "advanced-guardrails": {
+        "enabled": true
+      },
+      "security-scanning": {
+        "enabled": true
+      },
+      "mcp-security-hardening": {
+        "enabled": true
+      },
+      "resilience-patterns": {
+        "enabled": true
+      },
+      "pinchtab": {
+        "enabled": true
+      }
+    }
+  },
+  "plugins": {
+    "load": {
+      "paths": [
+        "/root/.openclaw/workspace/plugins/memory-lancedb-pro"
+      ]
+    },
+    "slots": {
+      "memory": "memory-lancedb-pro"
+    },
+    "entries": {
+      "memory-lancedb-pro": {
+        "enabled": true,
+        "config": {
+          "embedding": {
+            "apiKey": "${JINA_API_KEY}",
+            "model": "jina-embeddings-v5-text-small",
+            "baseURL": "https://api.jina.ai/v1",
+            "dimensions": 1024,
+            "taskQuery": "retrieval.query",
+            "taskPassage": "retrieval.passage",
+            "normalized": true
+          },
+          "dbPath": "~/.openclaw/memory/lancedb-pro",
+          "autoCapture": true,
+          "autoRecall": true,
+          "retrieval": {
+            "mode": "hybrid",
+            "vectorWeight": 0.7,
+            "bm25Weight": 0.3,
+            "minScore": 0.3,
+            "rerank": "cross-encoder",
+            "rerankApiKey": "${JINA_API_KEY}",
+            "rerankModel": "jina-reranker-v2-base-multilingual",
+            "rerankEndpoint": "https://api.jina.ai/v1/rerank",
+            "rerankProvider": "jina",
+            "candidatePoolSize": 20,
+            "recencyHalfLifeDays": 14,
+            "recencyWeight": 0.1,
+            "filterNoise": true,
+            "lengthNormAnchor": 500,
+            "hardMinScore": 0.35,
+            "timeDecayHalfLifeDays": 60
+          },
+          "enableManagementTools": false,
+          "scopes": {
+            "default": "global"
+          }
+        }
+      },
+      "discord": {
+        "enabled": true
+      }
+    }
+  }
+}
