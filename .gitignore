@@ -1,0 +1,55 @@
+# OpenClaw Backup - Git Ignore
+
+# Secrets and sensitive data
+*.json
+!*.example.json
+token*
+secret*
+password*
+*.key
+*.pem
+*.crt
+
+# Environment files
+.env
+.env.*
+*.local
+
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+*.temp
+*.log
+temp/
+tmp/
+
+# Large media (not needed for recovery)
+*.mp4
+*.mov
+*.avi
+*.zip
+*.tar.gz
+
+# OpenClaw specific (reinstallable)
+skills/
+plugins/
+.cw/
